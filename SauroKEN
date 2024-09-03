@@ -1,0 +1,67 @@
+data.sql
+
+
+INSERT INTO Users (UserID, Username, FirstName, LastName, DateOfBirth, Password, DateAdded) VALUES
+(1, 'ehurworth0', 'Emmery', 'Hurworth', '2004-03-27', 'eG2/FY{ws#B', '2020-02-07 12:34:56'),
+(2, 'wtraylen1', 'Willis', 'Traylen', '2002-12-12', 'kA8<jQe|n', '2023-04-24 17:28:39'),
+(3, 'ogreguoli2', 'Omar', 'Greguoli', '2000-11-21', 'wM1%!*`%F5', '2021-04-05 23:59:59'),
+(4, 'lmasters3', 'Lloyd', 'Masters', '2005-08-24', 'hE0\(|UYCb3#*', '2020-06-12 08:15:00'),
+(5, 'fleynton4', 'Felicio', 'Leynton', '2000-02-26', 'mD6_7ou~nwn', '2023-08-31 11:15:01'),
+(6, 'dsoutherden5', 'Denny', 'Southerden', '2006-05-14', 'pR7<TN{G', '2023-05-12 19:30:45'),
+(7, 'iautrie6', 'Ikey', 'Autrie', '2006-10-24', 'eA6_vA<xrbLI)Q', '2022-03-28 00:00:00'),
+(8, 'coldnall7', 'Corny', 'Oldnall', '2008-08-15', 'bW1<I)IsjVYv4', '2022-01-31 16:03:27'),
+(9, 'ablewitt8', 'Antonino', 'Blewitt', '2006-05-05', 'pW7$,s?`S', '2021-08-10 21:42:18'),
+(10, 'gconnochie9', 'Gareth', 'Connochie', '1998-12-28', 'jC4*5NlsvPS', '2023-05-02 07:09:03'),
+(11, 'mhantuscha', 'Marcos', 'Hantusch', '2000-08-10', 'cR0''a''L&h', '2024-03-28 13:37:48'),
+(12, 'ktortb', 'Kenton', 'Tort', '2004-10-04', 'pI6)LXUl8BC2', '2020-02-09 20:06:36'),
+(13, 'rbragac', 'Roth', 'Braga', '2004-11-05', 'dC6}skDHeo', '2020-08-05 01:02:03'),
+(14, 'gbessomd', 'Gerhard', 'Bessom', '2007-08-16', 'yU4\@mn`5', '2020-10-02 15:14:13'),
+(15, 'aleife', 'Ashley', 'Leif', '2000-12-16', 'iR2~rfvdEH)', '2024-08-15 22:21:20');
+
+INSERT INTO Friends (FriendID, FriendWhoAdded, FriendBeingAdded, IsAccepted, DateAdded) VALUES
+(1, 1, 4, true, '2023-07-21 18:56:11'),
+(2, 5, 2, true, '2023-10-05 21:22:01'),
+(3, 9, 3, true, '2023-11-07 07:38:10'),
+(4, 4, 7, true, '2023-06-28 17:42:29'),
+(5, 6, 1, false, '2022-10-23 22:34:08'),
+(6, 2, 8, false, '2023-06-15 04:26:59'),
+(7, 3, 6, true, '2024-04-24 05:45:50'),
+(8, 8, 10, true, '2022-07-17 23:21:10'),
+(9, 7, 9, false, '2024-01-04 14:53:08'),
+(10, 10, 5, false, '2022-01-09 13:00:10');
+
+INSERT INTO Groups (GroupID, GroupName, CreatedBy, DateAdded) VALUES
+(1, 'Monahan, Waters and Orn', 5, '2022-06-09 04:49:22'),
+(2, 'Mitchell, Mertz and Cruickshank', 2, '2022-10-23 12:34:56'),
+(3, 'Larkin-Bartell', 3, '2024-06-15 17:28:39'),
+(4, 'Brekke, O''Hara and Howe', 6, '2022-12-03 23:59:59'),
+(5, 'Quitzon LLC', 1, '2022-10-09 08:15:00'),
+(6, 'Dare-Graham', 8, '2023-07-25 14:16:12'),
+(7, 'Shanahan-Buckridge', 7, '2024-06-15 19:30:45'),
+(8, 'Koss-Sawayn', 4, '2023-12-24 00:00:00'),
+(9, 'Williamson, Ward and Conroy', 10, '2022-06-14 16:03:27'),
+(10, 'Schuster, Reichel and Ward', 9, '2023-04-05 21:42:18');
+
+INSERT INTO Posts (PostID, PostDescription, PostedBy, IsPublic, IsOnlyForFriends, GroupID, DatePosted) VALUES
+(1, 'Anyone interested in forming a study group for CS? Lets conquer this together!', 15, false, false, 1, '2024-08-20 12:34:56'),
+(2, 'Need a roommate for next semester? Hit me up if youre looking for a chill and organized living situation.', 5, false, false, 2, '2023-09-06 17:28:39'),
+(3, 'Selling textbooks at a great price! DM me if interested.', 4, false, false, 3, '2024-02-11 23:59:59'),
+(4, 'Dont miss the event happening this friday! Lets have some fun!', 7, false, false, 4, '2024-03-07 11:11:11'),
+(5, 'Struggling with Calculus? Im offering tutoring services. DM me for details.', 3, true, true, 5, '2024-06-20 19:30:45'),
+(6, 'Lost my phone somewhere on campus. Please let me know if youve found it!', 6, false, false, 6, '2024-06-10 00:00:00'),
+(7, 'Looking for group members for our project assignment. Lets collaborate!', 9, true, false, 7, '2023-08-09 16:03:27'),
+(8, 'Anyone interested in a part-time job at the library? Message me for more info.', 12, true, true, 8, '2024-08-10 21:42:18'),
+(9, 'Have extra tickets to the student fair. First come, first serve!', 14, false, false, 2, '2023-05-27 07:07:07'),
+(10, 'The parking space in this school is driving me crazy! Anyone else feeling the same?', 1, false, true, 10, '2024-03-25 13:37:48');
+
+INSERT INTO GroupMembershipRequests (GroupMemberShipRequestsID, GroupID, GroupMemberUserID, IsGroupMemberShipAccepted, DateAccepted) VALUES
+(1, 9, 7, true, '2023-07-31 12:34:56'),
+(2, 2, 5, false, '2024-04-24 17:28:39'),
+(3, 3, 6, false, '2024-08-28 23:59:59'),
+(4, 7, 4, false, '2023-11-26 08:15:00'),
+(5, 6, 10, false, '2022-08-15 11:11:11'),
+(6, 10, 8, true, '2023-09-01 19:30:45'),
+(7, 1, 9, false, '2024-08-10 00:00:00'),
+(8, 8, 1, true, '2024-04-05 16:03:27'),
+(9, 5, 2, false, '2024-07-04 21:42:18'),
+(10, 4, 3, true, '2024-03-15 07:07:07');
